@@ -1,0 +1,256 @@
+/*
+===================
+**FONT-FAMILY**
+=================== 
+*/
+@import url("https://fonts.googleapis.com/css2?family=Stardos+Stencil&display=swap");
+
+/*
+===================
+**GLOBAL**
+=================== 
+*/
+* {
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(to bottom, #e9d362, #333333);
+  font-family: "Stardos Stencil", sans-serif, monospace;
+  margin: 0;
+}
+/*
+===================
+**NAV**
+=================== 
+*/
+nav {
+  background: linear-gradient(to bottom, #00bf8f, #001510);
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+  border-radius: 5px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+nav a {
+  text-decoration: none;
+  margin-left: 30px;
+  position: relative;
+}
+nav a::after {
+  content: "";
+  border-bottom: 3px solid rgb(59, 136, 8);
+  border-radius: 15%;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(10px);
+  transition: transform 300ms ease;
+}
+nav a:hover::after {
+  opacity: 1;
+  transform: translateY(0px);
+}
+nav a:visited,
+nav a:link {
+  color: rgb(228, 243, 160);
+}
+header {
+  color: white;
+  height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80");
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header::after {
+  content: "";
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.7;
+}
+header * {
+  position: relative;
+  z-index: 1;
+}
+header h1 {
+  font-size: 60px;
+  color: turquoise;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+header p {
+  font-size: 30px;
+  margin: 0;
+  color: rgb(99, 163, 163);
+}
+/*
+===================
+**PROJECTS**
+=================== 
+*/
+.projects-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 880px;
+  margin: 20px auto;
+}
+.project {
+  margin: 20px;
+  max-width: 400px;
+}
+.project img {
+  max-width: 100%;
+  border-radius: 10%;
+  transition: transform 0.3s ease;
+}
+.project a {
+  text-decoration: none;
+}
+.project p {
+  color: rgb(20, 0, 107);
+  margin-top: 10px;
+  transition: transform 0.5s ease;
+}
+.project p:hover,
+.project img:hover {
+  color: rgb(238, 255, 0);
+  border: 2px solid rgb(13, 26, 13);
+  border-radius: 10px;
+  background: linear-gradient(to right, #948e99, #2e1437, #948e99);
+  transform: scale(1.1);
+}
+.btn {
+  font-size: 20px;
+  padding: 20px;
+  margin: 5px;
+  text-transform: uppercase;
+  border-radius: 200px;
+  border: 2px solid rgb(0, 109, 128);
+  color: rgb(0, 43, 51);
+  background-color: rgb(0, 202, 238);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.btn:active {
+  transform: translateY(5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+/*
+===================
+**SOCIAL MEDIA**
+=================== 
+*/
+section {
+  padding: 40px;
+  text-align: center;
+}
+section h2 {
+  font-size: 35px;
+  color: black;
+}
+section p {
+  font-size: 20px;
+  margin-top: 0;
+  color: rgb(0, 0, 0);
+}
+.social {
+  background: linear-gradient(to bottom, #e43a15, #2c7744);
+  color: whitesmoke;
+  padding: 20px;
+}
+.social-ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+.social-ul a {
+  color: white;
+  font-size: 35px;
+  margin: 0 20px;
+  text-decoration: none;
+}
+#twitter:hover {
+  border-radius: 30%;
+  border-left: 5px solid rgb(0, 172, 238);
+  border-right: 5px solid rgb(0, 172, 238);
+}
+#youtube:hover {
+  border-radius: 30%;
+  border-left: 5px solid rgb(146, 7, 0);
+  border-right: 5px solid rgb(146, 7, 0);
+}
+#github:hover {
+  border-radius: 30%;
+  border-left: 5px solid white;
+  border-right: 5px solid white;
+}
+#instagram:hover {
+  border-radius: 30%;
+  border-left: 5px solid #f58529;
+  border-right: 5px solid #dd2a7b;
+}
+#facebook:hover {
+  border-radius: 30%;
+  border-left: 5px solid #002877;
+  border-right: 5px solid #002877;
+}
+.gradient-text {
+  background: -webkit-linear-gradient(
+    #f58529,
+    #feda77,
+    #dd2a7b,
+    #8134af,
+    #515bd4
+  );
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/*
+===================
+**FOOTER**
+=================== 
+*/
+footer {
+  background: linear-gradient(to bottom, #00bf8f, #001510);
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  color: rgb(228, 243, 160);
+}
+/*
+===================
+**MEDIA QUERRY**
+=================== 
+*/
+@media (max-width: 440px) {
+  section {
+    padding: 20px;
+  }
+}
